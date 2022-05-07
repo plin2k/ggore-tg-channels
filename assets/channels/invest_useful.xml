@@ -1,0 +1,32 @@
+<xml>
+    <channel_id>-1001579096145</channel_id>
+
+    <title>Инвестиции Полезные</title>
+    <name>invest-useful</name>
+
+    <article_structure>
+        <row bold="1" bottom_margin="1">title</row>
+        <row bold="1" prefix="Дата публикации : ">date</row>
+        <row bold="1" prefix="Рейтинг статьи : ">rating</row>
+        <row bold="1" prefix="Теги : " bottom_margin="1">tags</row>
+        <row>link</row>
+    </article_structure>
+
+    <source rule="tinkoff_invest_social_profile" tags="Tinkoff_Journal">https://www.tinkoff.ru/invest/social/profile/Tinkoff_Journal/</source>
+    <source rule="tinkoff_invest_social_profile" tags="Pulse_Official">https://www.tinkoff.ru/invest/social/profile/Pulse_Official/</source>
+    <source rule="tinkoff_invest_social_profile" tags="Tinkoff_Catalog">https://www.tinkoff.ru/invest/social/profile/Tinkoff_Catalog/</source>
+    <source rule="tinkoff_invest_social_profile" tags="Tinkoff_Capital">https://www.tinkoff.ru/invest/social/profile/Tinkoff_Capital/</source>
+
+    <rule name="tinkoff_invest_social_profile">
+        <block>div div div div div div div div div div div[data-qa-tag="PulsePost"]</block>
+        <tags_block></tags_block>
+        <tags></tags>
+        <title>div[data-qa-tag="PulsePost"] div div[data-qa-tag="PulseReviewAndNewsBody"] a[data-qa-type="uikit/link"] span[data-qa-type="uikit/link.inner"] div:first-child</title>
+        <link prefix="https://www.tinkoff.ru">div[data-qa-tag="PulsePost"] div div[data-qa-tag="PulseReviewAndNewsBody"] a[data-qa-type="uikit/link"]</link>
+        <short_description></short_description>
+        <author>div[data-qa-tag="PulsePost"] div div[data-qa-tag="PulsePostAuthor"] div div:first-child div a[data-qa-type="uikit/link"] span[data-qa-type="uikit/link.inner"] span</author>
+<!--        <rating>div[data-qa-tag="PulsePost"] div div[data-qa-tag="PulsePostReactions"] div:first-child div:first-child</rating>-->
+<!--        <date layout="2006-01-02T15:04:05.000Z" attribute="datetime"></date>-->
+    </rule>
+
+</xml>

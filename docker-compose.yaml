@@ -1,0 +1,8 @@
+version: '3.8'
+
+services:
+  ggore:
+    image: ggore-tg-channels
+    restart: always
+    volumes:
+      - ./content.db:/app/content.db
