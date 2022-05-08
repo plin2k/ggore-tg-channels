@@ -13,7 +13,7 @@
         <row italic="1" top_margin="1">Channel Powered by kalink.in</row>
     </article_structure>
 
-    <source rule="habr" tags="MySQL,Hello">https://habr.com/ru/hub/mysql/top/monthly</source>
+    <source rule="habr" tags="MySQL">https://habr.com/ru/hub/mysql/top/monthly</source>
     <source rule="tproger" tags="MySQL">https://tproger.ru/tag/mysql</source>
 
     <rule name="habr">
