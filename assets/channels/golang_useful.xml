@@ -15,7 +15,7 @@
     <source rule="habr" tags="Go">https://habr.com/ru/hub/go/top/monthly</source>
     <source rule="habr" tags="Microservices">https://habr.com/ru/hub/microservices/top/monthly</source>
     <source rule="tproger" tags="Go">https://tproger.ru/tag/golang</source>
-    <source rule="proglib" tags="Go">https://proglib.io/tag/Go</source>
+<!--    <source rule="proglib" tags="Go">https://proglib.io/tag/Go</source>-->
     <source rule="go.dev" tags="Go">https://go.dev/blog</source>
 
     <rule name="go.dev">

@@ -17,7 +17,7 @@
     <source rule="habr" tags="Symfony">https://habr.com/ru/hub/symfony/top/monthly</source>
     <source rule="habr" tags="Yii">https://habr.com/ru/hub/yii/top/monthly</source>
     <source rule="tproger" tags="PHP">https://tproger.ru/tag/php</source>
-    <source rule="proglib" tags="PHP">https://proglib.io/tag/php</source>
+<!--    <source rule="proglib" tags="PHP">https://proglib.io/tag/php</source>-->
 
     <rule name="habr">
         <block>div div.tm-articles-list article.tm-articles-list__item</block>

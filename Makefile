@@ -19,6 +19,6 @@ compile:
 	GOOS=darwin GOARCH=arm64 go build -o bin/app_main_darwin_arm64 cmd/app/main.go
 	GOOS=darwin GOARCH=amd64 go build -o bin/app_main_darwin_amd64 cmd/app/main.go
 	GOOS=linux GOARCH=amd64 go build -o bin/app_main_linux_amd64 cmd/app/main.go
-	GOOS=linux GOARCH=arm64 go build -o bin/app_main_linux_arm64 cmd/app/main.go
+	GOOS=linux GOARCH=arm64 CGO_ENABLED=1 go build -o bin/app_main_linux_arm64 cmd/app/main.go
 	GOOS=windows GOARCH=amd64 go build -o bin/app_main_windows_amd64 cmd/app/main.go
 
