@@ -3,6 +3,7 @@ package main
 import (
 	"log"
 	"os"
+	"strconv"
 
 	"github.com/plin2k/ggore-tg-channels/internal/models"
 
@@ -23,11 +24,17 @@ func main() {
 	log.Println("Loading app")
 	err := godotenv.Load(envFile)
 	if err != nil {
-		log.Fatalln("Env Init", err)
+		log.Fatalln("Env Init : ", err)
+	}
+
+	limitArticles, err := strconv.Atoi(os.Getenv("LIMIT_ARTICLES"))
+	if err != nil {
+		log.Fatalln("Env Var LIMIT_ARTICLES : ", err)
 	}
 
 	cfg := &models.Config{
 		TelegramToken: os.Getenv("TELEGRAM_TOKEN"),
+		LimitArticles: limitArticles,
 	}
 
 	db, err := repository.NewSQLiteDB(dbFilePath)
@@ -45,5 +52,5 @@ func main() {
 
 	log.Println("Services loaded")
 
-	log.Println(telegram_channel.Start(srv, repos))
+	log.Println(telegram_channel.Start(cfg, srv, repos))
 }

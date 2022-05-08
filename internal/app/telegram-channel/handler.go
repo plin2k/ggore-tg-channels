@@ -17,11 +17,11 @@ import (
 )
 
 const (
-	xmlDir               = "./assets/channels/"
-	limitArticlesChannel = 2
+	xmlDir = "./assets/channels/"
 )
 
 type handler struct {
+	config   *models.Config
 	services *services.Service
 	repo     *repository.Repository
 
@@ -103,8 +103,9 @@ func (h *handler) publish() {
 	}
 }
 
-func Start(services *services.Service, repo *repository.Repository) error {
+func Start(cfg *models.Config, services *services.Service, repo *repository.Repository) error {
 	h := &handler{
+		config:   cfg,
 		services: services,
 		repo:     repo,
 
@@ -116,7 +117,7 @@ func Start(services *services.Service, repo *repository.Repository) error {
 		return fmt.Errorf("telegram-channel start: %w", err)
 	}
 
-	h.limitArticlesChannelMap = channels.GetLimitMap(limitArticlesChannel)
+	h.limitArticlesChannelMap = channels.GetLimitMap(h.config.LimitArticles)
 
 	channels.Construct()
 
