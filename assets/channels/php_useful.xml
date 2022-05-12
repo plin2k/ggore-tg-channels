@@ -5,7 +5,7 @@
     <name>php-useful</name>
 
     <article_structure>
-        <row> bold="1" bottom_margin="1">title</row>
+        <row bold="1" bottom_margin="1">title</row>
         <row bold="1" prefix="Дата публикации : ">date</row>
         <row bold="1" prefix="Рейтинг статьи : ">rating</row>
         <row bold="1" prefix="Теги : " bottom_margin="1">tags</row>
